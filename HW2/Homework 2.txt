@@ -1,0 +1,47 @@
+Arthur Zhou
+405999589
+4/16/23
+CS33
+
+3.60
+    a. %rdi holds x, %esi holds n, %rax/%eax stores result, and %rdx/%edx stores mask
+    b. result = 0
+       mask = 1
+    c. mask != 0
+    d. mask = mask << n
+    e. 
+        long loop(long x, long y) {
+            long result = 0;
+            long mask;
+            for (mask = 1; mask != 0; mask = mask << n) {
+                result |= (x & mask);
+            }
+
+            return result;
+        }
+
+3.63
+    a. 
+        long switch_prob(long x, long n) {
+            long result = x;
+            switch(n) {
+                case 60: 
+                case 62:
+                    result = 8 * x;
+                    break;
+                case 63: 
+                    result = x >> 3;
+                    break;
+                case 64:
+                    result = x;
+                    result = result << 4;
+                    result = result - x;
+                    x = result;
+                case 65:
+                    x = x * x;
+                default: 
+                    result = x + 0x4B
+            }
+
+            return result;
+        }
