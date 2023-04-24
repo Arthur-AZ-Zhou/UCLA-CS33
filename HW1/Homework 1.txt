@@ -1,0 +1,21 @@
+Arthur Zhou
+405999589
+4/9/23
+CS33
+
+2.71
+    a. The code won't work for negative numbers. 0xFF will translate to 000...11111111. As a result you cannot return a negative number due to the & operation
+    zeroing out the return result. 
+
+    b. 
+    int byte(packed_t word, int bytenum) {
+        return (word << ((3 - bytenum) << 3)) >> 24;
+    }
+    
+2.82
+    a. No, if x is Tmin the negative value of Tmin will wrap around because the absolute value of Tmax is one less than Tmin meaning Tmin = -Tmin. So if y is
+    a number like -2 Tmin is not greater than -2. 
+    b. True, because left shifting by 4 multiplies (x + y) by 16 and then adding y and subtracting x gives you 17y + 15x
+    c. True, LHS equals -x - 1 - y - 1 + 1 which happens to equal the RHS -x - y - 1
+    d. True, -(unsigned)(y - x) = (unsigned)(x - y). Distribute the unsigned and get ux - uy
+    e. True, if x is positive then you end up at the same value. Otherwise x is less than its original value
