@@ -1,0 +1,12 @@
+Arthur Zhou
+405999589
+4/18/23
+CS33
+
+magic8ball is a 3D array of characters size 1 byte, 8 bytes to move to adjacent index.
+
+We know magic8ball starts at memory address 0x7fffffffe000 as denoted by the $1.  magic8ball[3][4] is 3 * 8 * 8 + 4 * 8 = 224 bytes from the start because 
+3 denotes 3 2D arrays and 4 denotes 4 1D arrays, hence the multiplication by 8^2 and 8 respectively. Going down 244 bytes (or 224/8 = 28 columns) 
+we get 0x7fffffffe0e0. The 8 bytes give you W r o n g NULL NULL NULL
+
+So you get W r o n g NULL NULL NULL as your print statement.
