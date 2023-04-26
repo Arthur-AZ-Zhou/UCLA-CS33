@@ -1,0 +1,24 @@
+Arthur Zhou
+405999589
+4/30/23
+CS33
+
+2.89
+a. True, because x and dx round the same way 
+b. False, if y = Tmin and x = 0 will yield 0
+c. True, because each value is between Tmin and Tmax
+d. False, if everything is Tmax gcc throws an error because it surpasses 64 bits
+e. False, if x = 0 you get problems with dividing with 0
+
+3.70
+a. 
+e1.p: 0 bytes
+e1.y: 8 bytes
+e2.x: 0 bytes
+e2.next: 8 bytes
+
+b. 16 bytes
+c. 
+void proc(union ele *up) {
+    up->e2.x = *(up->e2.next->e1.p) - up->e2.next->e1.y;
+}
