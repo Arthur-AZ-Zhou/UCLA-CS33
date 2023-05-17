@@ -3,3 +3,14 @@ Arthur Zhou
 5/21/23
 CS33
 
+6.41
+75% will hit the cache because the line buffer[i][j].r = 0; will always miss but the other ones hit, so 3/4 of the lines hit.
+
+6.45
+Create 4 nested for loops that test the code block by block. Let's use blocks of size 16 to transpose the elements. We would write this using 4 for loops 
+having pseudocode like this:
+for (int i = 0; i < dim - block_size; i += block_size)
+    for (int j = 0 ...)
+        for (int k = i; k < i + block_size; k++)
+            for (int l = j ...)
+                dst[l * dim + k] = src[k * dim + l];
