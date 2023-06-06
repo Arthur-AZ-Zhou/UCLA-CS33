@@ -26,18 +26,19 @@ void parallel_to_grayscale(long img[DIM_ROW][DIM_COL][DIM_RGB], long ***grayscal
                     grayscale_img[block_row][block_col][2] = temp;
 
                     if (temp < min_gray) {
-                        min_max_gray[0] = temp;
                         min_gray = temp;
                     }
 
                     if (temp > max_gray) {
-                        min_max_gray[1] = temp;
                         max_gray = temp;
                     }
                 }
             }
         }
     }
+
+    min_max_gray[0] = min_gray;
+    min_max_gray[1] = max_gray;
 }
 
 // void parallel_to_grayscale(long img[DIM_ROW][DIM_COL][DIM_RGB], long ***grayscale_img, long *min_max_gray) {
