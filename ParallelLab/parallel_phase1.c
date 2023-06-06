@@ -32,7 +32,7 @@ void parallel_avg_pixel(long img[DIM_ROW][DIM_COL][DIM_RGB], long *avgs) {
     long avg_G = 0;
     long avg_B = 0;
     long count = DIM_ROW * DIM_COL; //number of pixels in image
-    // long *pimg[DIM_ROW][DIM_COL] = img;
+    long *pimg = img[DIM_ROW][DIM_COL];
     
     #pragma omp parallel for private(col, block_row, block_col) reduction(+: avg_R, avg_G, avg_B)
     for (row = 0; row < DIM_ROW; row += BLOCK) {
