@@ -6,7 +6,7 @@
 
 void parallel_convolution(long img[DIM_ROW + PAD][DIM_COL + PAD][DIM_RGB], long kernel[DIM_KERNEL][DIM_KERNEL], long ***convolved_img) {
     int row, col, block_row, block_col;
-    const int BLOCK = 50;
+    const int BLOCK = 10;
     long r = 0;
     long g = 0;
     long b = 0;

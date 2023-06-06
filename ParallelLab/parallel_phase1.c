@@ -27,7 +27,7 @@
 
 void parallel_avg_pixel(long img[DIM_ROW][DIM_COL][DIM_RGB], long *avgs) {
     int row, col, block_row, block_col;
-    const int BLOCK = 50;
+    const int BLOCK = 10;
     long avg_R = 0;
     long avg_G = 0;
     long avg_B = 0;
